@@ -23,14 +23,57 @@ public class ProblemSet5 {
         ProblemSet5 ps = new ProblemSet5();
         
         //Exercise 1
-//        System.out.println(ps.surroundMe("abc", "123"));
-        //Exercise 2
-//        System.out.println(ps.endsMeet("abcdefg", 3));
-        //Exercise 3
-//        System.out.println(ps.middleMan("a"));
-        //Exercise 4
-        System.out.println(ps.isCentered("abcdefg", "cde"));
 
+        System.out.println("Exercise 1");
+        System.out.println(" ");
+        System.out.println(ps.surroundMe("cde", "abfg")); //"abcdefg"
+        System.out.println(ps.surroundMe(null, "####")); //null
+        System.out.println(ps.surroundMe("abc", null)); //"abc"
+        System.out.println(ps.surroundMe("abc", "123")); //"abc"
+        System.out.println(" ");
+
+
+        //Exercise 2
+
+        System.out.println("Exercise 2");
+        System.out.println(" ");
+        System.out.println(ps.endsMeet("abcdefg", 2)); //abfg
+        System.out.println(ps.endsMeet(null, 2)); //null
+        System.out.println(ps.endsMeet("", 2)); //""
+        System.out.println(ps.endsMeet("abc", -1)); //"abc"
+        System.out.println(" ");
+
+
+        //Exercise 3
+
+        System.out.println("Exercise 3");
+        System.out.println(" ");
+        System.out.println(ps.middleMan("abcdefg")); //"cde"
+        System.out.println(ps.middleMan(null)); //null
+        System.out.println(ps.middleMan("12")); //"12"
+        System.out.println(ps.middleMan("a")); //"a"
+        System.out.println(" ");
+
+        //Exercise 4
+
+        System.out.println("Exercise 4");
+        System.out.println(" ");
+        System.out.println(ps.isCentered("abcdefg", "cde")); //true
+        System.out.println(ps.isCentered("abcdefg", "abc")); //false
+        System.out.println(ps.isCentered(null, "abc")); //false
+        System.out.println(ps.isCentered("abcd", "abc")); //false
+        System.out.println(ps.isCentered("abc", null)); //false
+        System.out.println(ps.isCentered("abcdefg", "cd")); //false
+        System.out.println(" ");
+
+        //Exercise 5
+
+        System.out.println("Exercise 5");
+        System.out.println(" ");
+        System.out.println(ps.countMe("I am an example sentence", 'e')); //2
+        System.out.println(ps.countMe(null, 'a')); //-1
+        System.out.println(ps.countMe("abc$ def$", '$')); //-1
+        System.out.println(" ");
 
     }
     
@@ -111,16 +154,22 @@ public class ProblemSet5 {
     public boolean isCentered(String text, String target) {
 
         String newString = "null";
+        boolean newBool = false;
 
         if (text != null && text.length() >= 3 && text.length() % 2 != 0 && target != null && target.length() == 3) {
             newString = text.substring(text.length()/2-1, text.length()/2+2);
-        } else if (text == null || target == null) {
-            newString = null;
+
+            if (newString.equals(target)) {
+                newBool = true;
+            } else {
+                newBool = false;
+            }
+
         } else {
-            newString = text;
+            newBool = false;
         }
 
-        return newString;
+        return newBool;
 
     }
     
@@ -130,9 +179,11 @@ public class ProblemSet5 {
     //  * Given a string and a character, compute the number of words that end in suffix.
     //  */
     
-    // public int countMe(String text, char suffix) {
+    public int countMe(String text, char suffix) {
 
-    // }
+        return 8;
+
+    }
     
     // /*
     //  * Exercise 6.
