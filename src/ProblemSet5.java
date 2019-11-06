@@ -20,6 +20,18 @@ public class ProblemSet5 {
     
     public static void main(String[] args) {
         
+        ProblemSet5 ps = new ProblemSet5();
+        
+        //Exercise 1
+//        System.out.println(ps.surroundMe("abc", "123"));
+        //Exercise 2
+//        System.out.println(ps.endsMeet("abcdefg", 3));
+        //Exercise 3
+//        System.out.println(ps.middleMan("a"));
+        //Exercise 4
+        System.out.println(ps.isCentered("abcdefg", "cde"));
+
+
     }
     
     /*
@@ -31,98 +43,145 @@ public class ProblemSet5 {
     
     public String surroundMe(String in, String out) {
 
+        String newString = "null";
+
+        if (in != null && out != null && out.length() == 4) {
+            newString = out.substring(0, 2) + in + out.substring(2, 4);
+        } else if (in == null) {
+            newString = null;
+        } else {
+            newString = in;
+        }
+
+        return newString;
+
     }
     
-    /*
-     * Exercise 2.
-     * 
-     * Given a string and an integer, return a new string that represents the first
-     * and last n characters of text.
-     */
+    // /*
+    //  * Exercise 2.
+    //  * 
+    //  * Given a string and an integer, return a new string that represents the first
+    //  * and last n characters of text.
+    //  */
     
     public String endsMeet(String text, int n) {
 
-    }
-    
-    /*
-     * Exercise 3.
-     * 
-     * Given a string, return a new string using the middle three characters of text.
-     */
-    
-    public String middleMan(String text) {
+        String newString = "null";
+
+        if (text != null && n >= 1 && n <= text.length()) {
+            newString = text.substring(0, n) + text.substring(text.length()-n, text.length());
+        } else if (text == null) {
+            newString = null;
+        } else {
+            newString = text;
+        }
+
+        return newString;
 
     }
     
-    /*
-     * Exercise 4.
-     * 
-     * Given two strings, determine whether or not target is equivalent to the middle
-     * three characters of text.
-     */
+    // /*
+    //  * Exercise 3.
+    //  * 
+    //  * Given a string, return a new string using the middle three characters of text.
+    //  */
+    
+    public String middleMan(String text) {
+       
+        String newString = "null";
+
+        if (text != null && text.length() >= 3 && text.length() % 2 != 0) {
+            newString = text.substring(text.length()/2-1, text.length()/2+2);
+        } else if (text == null) {
+            newString = null;
+        } else {
+            newString = text;
+        }
+
+        return newString;
+    }
+    
+    // /*
+    //  * Exercise 4.
+    //  * 
+    //  * Given two strings, determine whether or not target is equivalent to the middle
+    //  * three characters of text.
+    //  */
     
     public boolean isCentered(String text, String target) {
 
-    }
-    
-    /*
-     * Exercise 5.
-     * 
-     * Given a string and a character, compute the number of words that end in suffix.
-     */
-    
-    public int countMe(String text, char suffix) {
+        String newString = "null";
+
+        if (text != null && text.length() >= 3 && text.length() % 2 != 0 && target != null && target.length() == 3) {
+            newString = text.substring(text.length()/2-1, text.length()/2+2);
+        } else if (text == null || target == null) {
+            newString = null;
+        } else {
+            newString = text;
+        }
+
+        return newString;
 
     }
     
-    /*
-     * Exercise 6.
-     * 
-     * Given a string, compute the number of triplets in text.
-     */
+    // /*
+    //  * Exercise 5.
+    //  * 
+    //  * Given a string and a character, compute the number of words that end in suffix.
+    //  */
     
-    public int triplets(String text) {
+    // public int countMe(String text, char suffix) {
 
-    }
+    // }
     
-    /*
-     * Exercise 7.
-     * 
-     * Given a string, compute the sum of the digits in text.
-     */
+    // /*
+    //  * Exercise 6.
+    //  * 
+    //  * Given a string, compute the number of triplets in text.
+    //  */
     
-    public long addMe(String text) {
+    // public int triplets(String text) {
 
-    }
+    // }
     
-    /*
-     * Exercise 8.
-     * 
-     * Given a string, compute the length of the longest sequence.
-     */
+    // /*
+    //  * Exercise 7.
+    //  * 
+    //  * Given a string, compute the sum of the digits in text.
+    //  */
     
-    public long sequence(String text) {
+    // public long addMe(String text) {
 
-    }
+    // }
     
-    /*
-     * Exercise 9.
-     * 
-     * Given two strings, return a new string built by intertwining each of the
-     * characters of a and b.
-     */
+    // /*
+    //  * Exercise 8.
+    //  * 
+    //  * Given a string, compute the length of the longest sequence.
+    //  */
     
-    public String intertwine(String a, String b) {
+    // public long sequence(String text) {
 
-    }
+    // }
     
-    /*
-     * Exercise 10.
-     * 
-     * Given a string, determine whether or not it is a palindrome.
-     */
+    // /*
+    //  * Exercise 9.
+    //  * 
+    //  * Given two strings, return a new string built by intertwining each of the
+    //  * characters of a and b.
+    //  */
     
-    public boolean isPalindrome(String text) {
+    // public String intertwine(String a, String b) {
 
-    }
+    // }
+    
+    // /*
+    //  * Exercise 10.
+    //  * 
+    //  * Given a string, determine whether or not it is a palindrome.
+    //  */
+    
+    // public boolean isPalindrome(String text) {
+
+    // }
 }
