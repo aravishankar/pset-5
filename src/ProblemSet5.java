@@ -76,6 +76,16 @@ public class ProblemSet5 {
         System.out.println(ps.countMe("obama", '\u0398')); //-1
         System.out.println(" ");
 
+        //Exercise 6
+
+        System.out.println("Exercise 6");
+        System.out.println(" ");
+        System.out.println(ps.triplets("aaabbbccc")); //3
+        System.out.println(ps.triplets("aaaa")); //2
+        System.out.println(ps.triplets("abc")); //0
+        System.out.println(ps.triplets(null)); //-1
+        System.out.println(" ");
+
     }
     
     /*
