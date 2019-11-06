@@ -73,6 +73,7 @@ public class ProblemSet5 {
         System.out.println(ps.countMe("I am an example sentence", 'e')); //2
         System.out.println(ps.countMe(null, 'a')); //-1
         System.out.println(ps.countMe("abc$ def$", '$')); //-1
+        System.out.println(ps.countMe("obama", '\u0398')); //-1
         System.out.println(" ");
 
     }
@@ -181,7 +182,23 @@ public class ProblemSet5 {
     
     public int countMe(String text, char suffix) {
 
-        return 8;
+        int newInt = 0;
+        int count = 0;
+
+        if (text != null && Character.isLetter(suffix) && ((suffix >= 'a' && suffix <= 'z') || (suffix >= 'A' && suffix <= 'Z'))) {
+
+            for (int i = 0; i < text.length(); i++) {    
+                if (text.charAt(i) == suffix && (i == text.length() - 1 || text.charAt(i+1) == ' ')) {
+                    newInt++;
+                }
+            }    
+
+        } else {
+            newInt = -1;
+        }
+
+
+        return newInt;
 
     }
     
