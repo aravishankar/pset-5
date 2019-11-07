@@ -218,9 +218,27 @@ public class ProblemSet5 {
     //  * Given a string, compute the number of triplets in text.
     //  */
     
-    // public int triplets(String text) {
+    public int triplets(String text) {
+        
+        int newInt = 0;
 
-    // }
+        if (text != null) {
+
+            for (int i = 0; i < text.length(); i++) {
+
+                if (i+2 < text.length() && (text.charAt(i) == text.charAt(i+1) && text.charAt(i) == text.charAt(i+2))) {
+                    newInt += 1;
+                }
+
+            }
+
+        } else {
+            newInt = -1;
+        }
+
+        return newInt;
+
+    }
     
     // /*
     //  * Exercise 7.
