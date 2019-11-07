@@ -86,6 +86,45 @@ public class ProblemSet5 {
         System.out.println(ps.triplets(null)); //-1
         System.out.println(" ");
 
+        //Exercise 7
+
+        System.out.println("Exercise 7");
+        System.out.println(" ");
+        System.out.println(ps.addMe("123 abc 123")); //12
+        System.out.println(ps.addMe("abcdefghijk")); //0
+        System.out.println(ps.addMe(null)); //-1
+        System.out.println(" ");
+
+        //Exercise 8
+
+        // System.out.println("Exercise 8");
+        // System.out.println(" ");
+        // System.out.println(ps.sequence("abbcccdddd")); //4        
+        // System.out.println(ps.sequence("aAabBbBb")); //1        
+        // System.out.println(ps.sequence("")); //0      
+        // System.out.println(ps.sequence(null)); //-1       
+        // System.out.println(" ");
+
+        //Exercise 9
+
+        // System.out.println("Exercise 9");
+        // System.out.println(" ");
+        // System.out.println(ps.intertwine("aceg", "bdfh")); //"abcdefgh"        
+        // System.out.println(ps.intertwine("abc", "12345")); //"a1b2c345"        
+        // System.out.println(ps.intertwine(null, "abcd")); //null     
+        // System.out.println(ps.intertwine("abcd", null)); //null
+        // System.out.println(ps.intertwine(null, null)); //null            
+        // System.out.println(" ");
+
+        //Exercise 10
+
+        // System.out.println("Exercise 10");
+        // System.out.println(" ");  
+        // System.out.println(ps.isPalindrome("racecar")); //true    
+        // System.out.println(ps.isPalindrome("Madam")); //false
+        // System.out.println(ps.isPalindrome(null)); //false          
+        // System.out.println(" ");
+
     }
     
     /*
@@ -246,9 +285,38 @@ public class ProblemSet5 {
     //  * Given a string, compute the sum of the digits in text.
     //  */
     
-    // public long addMe(String text) {
+    public long addMe(String text) {
 
-    // }
+        long newLong = 0;
+        boolean isInt = false;
+        int temp = 0;
+
+        if (text != null) {
+
+            for (int i = 0; i < text.length(); i++) {
+
+                isInt = false;
+
+                try {
+                    temp = Integer.parseInt(Character.toString(text.charAt(i)));
+                    isInt = true;
+                } catch (Exception e) {
+                    isInt = false;
+                }
+
+                if (isInt) {
+                    newLong += temp;
+                }
+
+            }
+            
+        } else {
+            newLong = -1;
+        }
+
+        return newLong;
+
+    }
     
     // /*
     //  * Exercise 8.
@@ -256,9 +324,36 @@ public class ProblemSet5 {
     //  * Given a string, compute the length of the longest sequence.
     //  */
     
-    // public long sequence(String text) {
+    public long sequence(String text) {
 
-    // }
+        long current = 0;
+        long record = 0;
+        char previousCharacter = text.charAt(0);
+
+        if (text != null) {
+            
+            for (int i = 0; i < text.length(); i++) {
+
+                if (text.charAt(i) == previousCharacter) {
+                    current += 1;
+                } else {
+                    current = 0;
+                }
+
+                if (current > record) {
+                    record = current;
+                }
+
+
+            }
+
+        } else {
+            record = -1;
+        }
+
+        return record;
+
+    }
     
     // /*
     //  * Exercise 9.
