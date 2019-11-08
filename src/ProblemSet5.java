@@ -97,24 +97,25 @@ public class ProblemSet5 {
 
         //Exercise 8
 
-        // System.out.println("Exercise 8");
-        // System.out.println(" ");
-        // System.out.println(ps.sequence("abbcccdddd")); //4        
-        // System.out.println(ps.sequence("aAabBbBb")); //1        
-        // System.out.println(ps.sequence("")); //0      
-        // System.out.println(ps.sequence(null)); //-1       
-        // System.out.println(" ");
+        System.out.println("Exercise 8");
+        System.out.println(" ");
+        System.out.println(ps.sequence("abbcccdddd")); //4        
+        System.out.println(ps.sequence("aAabBbBb")); //1        
+        System.out.println(ps.sequence("")); //0      
+        System.out.println(ps.sequence(null)); //-1  
+        System.out.println(ps.sequence("   "));     
+        System.out.println(" ");
 
         //Exercise 9
 
-        // System.out.println("Exercise 9");
-        // System.out.println(" ");
-        // System.out.println(ps.intertwine("aceg", "bdfh")); //"abcdefgh"        
-        // System.out.println(ps.intertwine("abc", "12345")); //"a1b2c345"        
-        // System.out.println(ps.intertwine(null, "abcd")); //null     
-        // System.out.println(ps.intertwine("abcd", null)); //null
-        // System.out.println(ps.intertwine(null, null)); //null            
-        // System.out.println(" ");
+        System.out.println("Exercise 9");
+        System.out.println(" ");
+        System.out.println(ps.intertwine("aceg", "bdfh")); //"abcdefgh"        
+        System.out.println(ps.intertwine("abc", "12345")); //"a1b2c345"        
+        System.out.println(ps.intertwine(null, "abcd")); //null     
+        System.out.println(ps.intertwine("abcd", null)); //null
+        System.out.println(ps.intertwine(null, null)); //null            
+        System.out.println(" ");
 
         //Exercise 10
 
@@ -324,29 +325,39 @@ public class ProblemSet5 {
     //  * Given a string, compute the length of the longest sequence.
     //  */
     
+
     public long sequence(String text) {
-
-        long current = 0;
-        long record = 0;
-        char previousCharacter = text.charAt(0);
-
+        
+        long record = 1;
+        long sequenceLength = 1;
+        char first = ' ';
+        char second = ' ';
+        
         if (text != null) {
             
-            for (int i = 0; i < text.length(); i++) {
+            for (int i = 1; i < text.length(); i++) {
 
-                if (text.charAt(i) == previousCharacter) {
-                    current += 1;
+                first = text.charAt(i-1);
+                second = text.charAt(i);
+
+                if (first == second) {
+
+                    sequenceLength += 1;
+
+                    if (sequenceLength > record) {
+                        record = sequenceLength;
+                    }
+
                 } else {
-                    current = 0;
+                    sequenceLength = 1;
                 }
-
-                if (current > record) {
-                    record = current;
-                }
-
 
             }
 
+            if (text.length() == 0) {
+                record = 0;
+            }
+        
         } else {
             record = -1;
         }
@@ -362,9 +373,43 @@ public class ProblemSet5 {
     //  * characters of a and b.
     //  */
     
-    // public String intertwine(String a, String b) {
+    public String intertwine(String a, String b) {
 
-    // }
+        long record = 0;
+        // boolean isARecord = false;
+        String intertwined = "";
+
+        if (a != null && b != null) {
+
+            if (a.length() > b.length()) {
+
+                record = a.length();
+                // isARecord = true;
+                
+            } else {
+                record = b.length();
+            }
+
+            for (int i = 0;i < record; i++) {
+                if (i < a.length() && i < b.length()) {
+
+                    intertwined += String.valueOf(a.charAt(i));
+                    intertwined += String.valueOf(b.charAt(i));
+
+                } else if (i < a.length()) {
+                    intertwined += String.valueOf(a.charAt(i));
+                } else if (i < b.length()) {
+                    intertwined += String.valueOf(b.charAt(i));
+                }
+            }
+
+        } else {
+            intertwined = null;
+        }
+
+        return intertwined;
+
+    }
     
     // /*
     //  * Exercise 10.
