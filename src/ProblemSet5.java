@@ -137,17 +137,17 @@ public class ProblemSet5 {
     
     public String surroundMe(String in, String out) {
 
-        String newString = "null";
+        String surroundMeString = "null";
 
         if (in != null && out != null && out.length() == 4) {
-            newString = out.substring(0, 2) + in + out.substring(2, 4);
+            surroundMeString = out.substring(0, 2) + in + out.substring(2, 4);
         } else if (in == null) {
-            newString = null;
+            surroundMeString = null;
         } else {
-            newString = in;
+            surroundMeString = in;
         }
 
-        return newString;
+        return surroundMeString;
 
     }
     
@@ -160,17 +160,17 @@ public class ProblemSet5 {
     
     public String endsMeet(String text, int n) {
 
-        String newString = "null";
+        String endsMeetString = "null";
 
         if (text != null && n >= 1 && n <= text.length()) {
-            newString = text.substring(0, n) + text.substring(text.length()-n, text.length());
+            endsMeetString = text.substring(0, n) + text.substring(text.length()-n, text.length());
         } else if (text == null) {
-            newString = null;
+            endsMeetString = null;
         } else {
-            newString = text;
+            endsMeetString = text;
         }
 
-        return newString;
+        return endsMeetString;
 
     }
     
@@ -182,17 +182,17 @@ public class ProblemSet5 {
     
     public String middleMan(String text) {
        
-        String newString = "null";
+        String middleManString = "null";
 
         if (text != null && text.length() >= 3 && text.length() % 2 != 0) {
-            newString = text.substring(text.length()/2-1, text.length()/2+2);
+            middleManString = text.substring(text.length()/2-1, text.length()/2+2);
         } else if (text == null) {
-            newString = null;
+            middleManString = null;
         } else {
-            newString = text;
+            middleManString = text;
         }
 
-        return newString;
+        return middleManString;
     }
     
     // /*
@@ -204,13 +204,13 @@ public class ProblemSet5 {
     
     public boolean isCentered(String text, String target) {
 
-        String newString = "null";
+        String centeredString = "null";
         boolean newBool = false;
 
         if (text != null && text.length() >= 3 && text.length() % 2 != 0 && target != null && target.length() == 3) {
-            newString = text.substring(text.length()/2-1, text.length()/2+2);
+            centeredString = text.substring(text.length()/2-1, text.length()/2+2);
 
-            if (newString.equals(target)) {
+            if (centeredString.equals(target)) {
                 newBool = true;
             } else {
                 newBool = false;
@@ -232,7 +232,6 @@ public class ProblemSet5 {
     
     public int countMe(String text, char suffix) {
 
-        int newInt = 0;
         int count = 0;
 
         if (text != null && Character.isLetter(suffix) && ((suffix >= 'a' && suffix <= 'z') 
@@ -240,16 +239,16 @@ public class ProblemSet5 {
 
             for (int i = 0; i < text.length(); i++) {    
                 if (text.charAt(i) == suffix && (i == text.length() - 1 || text.charAt(i+1) == ' ')) {
-                    newInt++;
+                    count++;
                 }
             }    
 
         } else {
-            newInt = -1;
+            count = -1;
         }
 
 
-        return newInt;
+        return count;
 
     }
     
@@ -261,23 +260,23 @@ public class ProblemSet5 {
     
     public int triplets(String text) {
         
-        int newInt = 0;
+        int count = 0;
 
         if (text != null) {
 
             for (int i = 0; i < text.length(); i++) {
 
                 if (i+2 < text.length() && (text.charAt(i) == text.charAt(i+1) && text.charAt(i) == text.charAt(i+2))) {
-                    newInt += 1;
+                    count += 1;
                 }
 
             }
 
         } else {
-            newInt = -1;
+            count = -1;
         }
 
-        return newInt;
+        return count;
 
     }
     
@@ -289,7 +288,7 @@ public class ProblemSet5 {
     
     public long addMe(String text) {
 
-        long newLong = 0;
+        long sum = 0;
         boolean isInt = false;
         int temp = 0;
 
@@ -307,16 +306,16 @@ public class ProblemSet5 {
                 }
 
                 if (isInt) {
-                    newLong += temp;
+                    sum += temp;
                 }
 
             }
             
         } else {
-            newLong = -1;
+            sum = -1;
         }
 
-        return newLong;
+        return sum;
 
     }
     
