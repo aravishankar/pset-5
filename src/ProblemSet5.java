@@ -22,109 +22,109 @@ public class ProblemSet5 {
         
         ProblemSet5 ps = new ProblemSet5();
         
-        //Exercise 1
+        // //Exercise 1
 
-        System.out.println("Exercise 1");
-        System.out.println(" ");
-        System.out.println(ps.surroundMe("cde", "abfg")); //"abcdefg"
-        System.out.println(ps.surroundMe(null, "####")); //null
-        System.out.println(ps.surroundMe("abc", null)); //"abc"
-        System.out.println(ps.surroundMe("abc", "123")); //"abc"
-        System.out.println(" ");
-
-
-        //Exercise 2
-
-        System.out.println("Exercise 2");
-        System.out.println(" ");
-        System.out.println(ps.endsMeet("abcdefg", 2)); //abfg
-        System.out.println(ps.endsMeet(null, 2)); //null
-        System.out.println(ps.endsMeet("", 2)); //""
-        System.out.println(ps.endsMeet("abc", -1)); //"abc"
-        System.out.println(" ");
+        // System.out.println("Exercise 1");
+        // System.out.println(" ");
+        // System.out.println(ps.surroundMe("cde", "abfg")); //"abcdefg"
+        // System.out.println(ps.surroundMe(null, "####")); //null
+        // System.out.println(ps.surroundMe("abc", null)); //"abc"
+        // System.out.println(ps.surroundMe("abc", "123")); //"abc"
+        // System.out.println(" ");
 
 
-        //Exercise 3
+        // //Exercise 2
 
-        System.out.println("Exercise 3");
-        System.out.println(" ");
-        System.out.println(ps.middleMan("abcdefg")); //"cde"
-        System.out.println(ps.middleMan(null)); //null
-        System.out.println(ps.middleMan("12")); //"12"
-        System.out.println(ps.middleMan("a")); //"a"
-        System.out.println(" ");
+        // System.out.println("Exercise 2");
+        // System.out.println(" ");
+        // System.out.println(ps.endsMeet("abcdefg", 2)); //abfg
+        // System.out.println(ps.endsMeet(null, 2)); //null
+        // System.out.println(ps.endsMeet("", 2)); //""
+        // System.out.println(ps.endsMeet("abc", -1)); //"abc"
+        // System.out.println(" ");
 
-        //Exercise 4
 
-        System.out.println("Exercise 4");
-        System.out.println(" ");
-        System.out.println(ps.isCentered("abcdefg", "cde")); //true
-        System.out.println(ps.isCentered("abcdefg", "abc")); //false
-        System.out.println(ps.isCentered(null, "abc")); //false
-        System.out.println(ps.isCentered("abcd", "abc")); //false
-        System.out.println(ps.isCentered("abc", null)); //false
-        System.out.println(ps.isCentered("abcdefg", "cd")); //false
-        System.out.println(" ");
+        // //Exercise 3
 
-        //Exercise 5
+        // System.out.println("Exercise 3");
+        // System.out.println(" ");
+        // System.out.println(ps.middleMan("abcdefg")); //"cde"
+        // System.out.println(ps.middleMan(null)); //null
+        // System.out.println(ps.middleMan("12")); //"12"
+        // System.out.println(ps.middleMan("a")); //"a"
+        // System.out.println(" ");
 
-        System.out.println("Exercise 5");
-        System.out.println(" ");
-        System.out.println(ps.countMe("I am an example sentence", 'e')); //2
-        System.out.println(ps.countMe(null, 'a')); //-1
-        System.out.println(ps.countMe("abc$ def$", '$')); //-1
-        System.out.println(ps.countMe("obama", '\u0398')); //-1
-        System.out.println(" ");
+        // //Exercise 4
 
-        //Exercise 6
+        // System.out.println("Exercise 4");
+        // System.out.println(" ");
+        // System.out.println(ps.isCentered("abcdefg", "cde")); //true
+        // System.out.println(ps.isCentered("abcdefg", "abc")); //false
+        // System.out.println(ps.isCentered(null, "abc")); //false
+        // System.out.println(ps.isCentered("abcd", "abc")); //false
+        // System.out.println(ps.isCentered("abc", null)); //false
+        // System.out.println(ps.isCentered("abcdefg", "cd")); //false
+        // System.out.println(" ");
 
-        System.out.println("Exercise 6");
-        System.out.println(" ");
-        System.out.println(ps.triplets("aaabbbccc")); //3
-        System.out.println(ps.triplets("aaaa")); //2
-        System.out.println(ps.triplets("abc")); //0
-        System.out.println(ps.triplets(null)); //-1
-        System.out.println(" ");
+        // //Exercise 5
 
-        //Exercise 7
+        // System.out.println("Exercise 5");
+        // System.out.println(" ");
+        // System.out.println(ps.countMe("I am an example sentence", 'e')); //2
+        // System.out.println(ps.countMe(null, 'a')); //-1
+        // System.out.println(ps.countMe("abc$ def$", '$')); //-1
+        // System.out.println(ps.countMe("obama", '\u0398')); //-1
+        // System.out.println(" ");
 
-        System.out.println("Exercise 7");
-        System.out.println(" ");
-        System.out.println(ps.addMe("123 abc 123")); //12
-        System.out.println(ps.addMe("abcdefghijk")); //0
-        System.out.println(ps.addMe(null)); //-1
-        System.out.println(" ");
+        // //Exercise 6
 
-        //Exercise 8
+        // System.out.println("Exercise 6");
+        // System.out.println(" ");
+        // System.out.println(ps.triplets("aaabbbccc")); //3
+        // System.out.println(ps.triplets("aaaa")); //2
+        // System.out.println(ps.triplets("abc")); //0
+        // System.out.println(ps.triplets(null)); //-1
+        // System.out.println(" ");
 
-        System.out.println("Exercise 8");
-        System.out.println(" ");
-        System.out.println(ps.sequence("abbcccdddd")); //4        
-        System.out.println(ps.sequence("aAabBbBb")); //1        
-        System.out.println(ps.sequence("")); //0      
-        System.out.println(ps.sequence(null)); //-1  
-        System.out.println(ps.sequence("   "));     
-        System.out.println(" ");
+        // //Exercise 7
 
-        //Exercise 9
+        // System.out.println("Exercise 7");
+        // System.out.println(" ");
+        // System.out.println(ps.addMe("123 abc 123")); //12
+        // System.out.println(ps.addMe("abcdefghijk")); //0
+        // System.out.println(ps.addMe(null)); //-1
+        // System.out.println(" ");
 
-        System.out.println("Exercise 9");
-        System.out.println(" ");
-        System.out.println(ps.intertwine("aceg", "bdfh")); //"abcdefgh"        
-        System.out.println(ps.intertwine("abc", "12345")); //"a1b2c345"        
-        System.out.println(ps.intertwine(null, "abcd")); //null     
-        System.out.println(ps.intertwine("abcd", null)); //null
-        System.out.println(ps.intertwine(null, null)); //null            
-        System.out.println(" ");
+        // //Exercise 8
 
-        //Exercise 10
+        // System.out.println("Exercise 8");
+        // System.out.println(" ");
+        // System.out.println(ps.sequence("abbcccdddd")); //4        
+        // System.out.println(ps.sequence("aAabBbBb")); //1        
+        // System.out.println(ps.sequence("")); //0      
+        // System.out.println(ps.sequence(null)); //-1  
+        // System.out.println(ps.sequence("   "));     
+        // System.out.println(" ");
 
-        System.out.println("Exercise 10");
-        System.out.println(" ");  
-        System.out.println(ps.isPalindrome("racecar")); //true    
-        System.out.println(ps.isPalindrome("Madam")); //false
-        System.out.println(ps.isPalindrome(null)); //false          
-        System.out.println(" ");
+        // //Exercise 9
+
+        // System.out.println("Exercise 9");
+        // System.out.println(" ");
+        // System.out.println(ps.intertwine("aceg", "bdfh")); //"abcdefgh"        
+        // System.out.println(ps.intertwine("abc", "12345")); //"a1b2c345"        
+        // System.out.println(ps.intertwine(null, "abcd")); //null     
+        // System.out.println(ps.intertwine("abcd", null)); //null
+        // System.out.println(ps.intertwine(null, null)); //null            
+        // System.out.println(" ");
+
+        // //Exercise 10
+
+        // System.out.println("Exercise 10");
+        // System.out.println(" ");  
+        // System.out.println(ps.isPalindrome("racecar")); //true    
+        // System.out.println(ps.isPalindrome("Madam")); //false
+        // System.out.println(ps.isPalindrome(null)); //false          
+        // System.out.println(" ");
 
     }
     
