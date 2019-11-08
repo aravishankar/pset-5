@@ -119,12 +119,12 @@ public class ProblemSet5 {
 
         //Exercise 10
 
-        // System.out.println("Exercise 10");
-        // System.out.println(" ");  
-        // System.out.println(ps.isPalindrome("racecar")); //true    
-        // System.out.println(ps.isPalindrome("Madam")); //false
-        // System.out.println(ps.isPalindrome(null)); //false          
-        // System.out.println(" ");
+        System.out.println("Exercise 10");
+        System.out.println(" ");  
+        System.out.println(ps.isPalindrome("racecar")); //true    
+        System.out.println(ps.isPalindrome("Madam")); //false
+        System.out.println(ps.isPalindrome(null)); //false          
+        System.out.println(" ");
 
     }
     
@@ -417,7 +417,26 @@ public class ProblemSet5 {
     //  * Given a string, determine whether or not it is a palindrome.
     //  */
     
-    // public boolean isPalindrome(String text) {
+    public boolean isPalindrome(String text) {
+        boolean isPalindrome = false;
+        String reverseString = "";
 
-    // }
+        if (text != null) {
+
+            for (int i = text.length()-1 ; i >= 0; i--) {
+                reverseString += String.valueOf(text.charAt(i));
+            }
+
+            if (text.equals(reverseString)) {
+                isPalindrome = true;
+            }
+
+        } else {
+            isPalindrome = false;
+        }
+
+        return isPalindrome;
+
+    }
+
 }
