@@ -235,7 +235,8 @@ public class ProblemSet5 {
         int newInt = 0;
         int count = 0;
 
-        if (text != null && Character.isLetter(suffix) && ((suffix >= 'a' && suffix <= 'z') || (suffix >= 'A' && suffix <= 'Z'))) {
+        if (text != null && Character.isLetter(suffix) && ((suffix >= 'a' && suffix <= 'z') 
+          || (suffix >= 'A' && suffix <= 'Z'))) {
 
             for (int i = 0; i < text.length(); i++) {    
                 if (text.charAt(i) == suffix && (i == text.length() - 1 || text.charAt(i+1) == ' ')) {
